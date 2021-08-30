@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require 'ruby-cherry/lib/FizzBuzz'
+require './FizzBuzz'
 
 class FizzBuzzTest < Minitest::Test
     def test_fizz_buzz
