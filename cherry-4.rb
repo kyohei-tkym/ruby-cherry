@@ -33,3 +33,41 @@ numbers = [1,2,3,4,5,22,60]
 even_numbers = numbers.reject{|n| n%3 == 0}
 puts even_numbers
 
+a = [1,2,3,4,5]
+puts a[1..3]
+a = 'abcdef'
+puts a[1...3]
+
+def liquid?(temperature)
+    (0...100).include?(temperature)
+end
+puts liquid?(-1)
+puts liquid?(0)
+puts liquid?(99)
+puts liquid?(100)
+
+def charge(age)
+    case age
+    when 0..5
+        0
+    when 6..12
+        300
+    when 13..18
+        600
+    else
+        1000
+    end
+end
+puts charge(3)
+puts charge(8)
+puts charge(15)
+puts charge(19)
+
+puts [*1..5]
+
+require 'set'
+    a = Set.new([1, 2, 3])
+    b = Set.new([3, 4, 5])
+    puts a | b
+    puts a - b
+    puts a & b
