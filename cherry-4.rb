@@ -66,8 +66,24 @@ puts charge(19)
 puts [*1..5]
 
 require 'set'
-    a = Set.new([1, 2, 3])
-    b = Set.new([3, 4, 5])
-    puts a | b
-    puts a - b
-    puts a & b
+a = Set.new([1, 2, 3])
+b = Set.new([3, 4, 5])
+puts a | b
+puts a - b
+puts a & b
+def greeting(*names)
+    "#{names.join('と')}、こんにちは！"
+end
+
+puts greeting('田中さん')
+puts greeting('田中さん', '鈴木さん')
+puts greeting('田中さん','鈴木さん','佐藤さん')
+
+puts %w!apple melon orange!
+puts 'Ruby'.chars
+puts 'Ruby,Java,Perl,PHP'.split(',')
+
+a = Array.new(5) {'default'}
+str = a[0]
+str.upcase!
+puts a
