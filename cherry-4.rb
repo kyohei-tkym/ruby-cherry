@@ -87,3 +87,24 @@ a = Array.new(5) {'default'}
 str = a[0]
 str.upcase!
 puts a
+
+fruits = ['apple', 'orange', 'melon']
+fruits.each_with_index{|fruits,i| puts "#{i}: #{fruits}"}
+
+fruits = ['apple', 'orange', 'melon']
+fruits.each.with_index(1) {|fruits,i| puts "#{i}: #{fruits}"}
+
+dimentions = [
+    [10,20],
+    [30,40],
+    [50,60],
+]
+areas = []
+dimentions.each do |length, width|
+    areas << length * width
+end
+puts areas
+
+sum = 0
+5.times {|n| sum += n}
+puts sum
