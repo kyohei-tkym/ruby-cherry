@@ -108,3 +108,45 @@ puts areas
 sum = 0
 5.times {|n| sum += n}
 puts sum
+
+a = []
+while a.size < 5
+    a << 1
+end
+puts a
+
+a = [10, 20, 30, 40, 50]
+until a.size <= 3
+    a.delete_at(-1)
+end
+puts a
+
+numbers = [1, 2, 3, 4]
+sum = 0
+for n in numbers
+    sum += n
+end
+puts sum
+
+numbers = [1, 2, 3, 4, 5]
+loop do
+    n = numbers.sample
+    puts n
+    break if n == 5
+end
+
+fruits = ['apple', 'melon', 'orange']
+numbers = [1, 2, 3]
+catch :done do
+    fruits.shuffle.each do |fruits|
+        numbers.shuffle.each do |n|
+            puts "#{fruits}, #{n}"
+            if fruits == 'orange' && n == 3
+                throw :done
+            end
+        end
+    end
+end
+
+
+
