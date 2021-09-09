@@ -66,6 +66,16 @@ puts text.split(/,|-/)
 
 text = '私の誕生日は1977年7月17日です'
 puts text.gsub(
-    /(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日/, 
+    /(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日/,
     '\k<year>-\k<month>-\k<day>'
 )
+
+text = '03-1234-5678'
+case text
+when /^\d{3}-\d{4}$/
+    puts '郵便番号です'
+when /^\d{4}\/\d{1,2}\/\d{1,2}$/
+    puts '日付です'
+when /^\d+-\d+-\d+$/
+    puts '電話番号です'
+end
